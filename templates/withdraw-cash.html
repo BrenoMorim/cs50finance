@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Withdraw cash
+{% endblock %}
+
+{% block main %}
+
+    <form action="/withdraw-cash" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="account" placeholder="Account number" type="text">
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" class="form-control" name="bank" placeholder="Bank name" type="text">
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" class="form-control" name="cash" placeholder="Cash" type="number">
+        </div>
+        <button class="btn btn-primary" type="submit">Withdraw cash</button>
+    </form>
+
+{% endblock %}

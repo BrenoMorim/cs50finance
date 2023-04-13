@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    My account
+{% endblock %}
+
+{% block main %}
+    <section>
+
+        <h2>{{ user['username'] }}'s account</h2>
+
+        <h3 class="m-3">Current cash: {{ "${:,.2f}".format(user['cash']) }}</h3>
+
+        <div class="mt-3">
+            <a class="btn btn-primary m-2" href="/add-cash">Add more cash</a>
+            <a class="btn btn-danger m-2" href="/withdraw-cash">Withdraw cash</a>
+            <a class="btn btn-info m-2" href="/change-password">Change password</a>
+        </div>
+    </section>
+{% endblock %}
